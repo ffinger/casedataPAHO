@@ -15,6 +15,7 @@ for fn in flist:
 df=pd.concat(dfl,axis=1)
 
 df=df.reindex_axis(sorted(df.columns), axis=1)
+df.sort_index(inplace=True)
 
 df.to_pickle('dataframeCombined.pickle')
 df.to_csv('allDept.csv')
